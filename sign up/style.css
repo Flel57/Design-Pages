@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten&family=Montserrat&display=swap');
+
+:root{
+    --text-clr: black;
+    --text-accent: grey;
+    --basic-clr: #FFFBD7;
+    --accent-clr1: #a9def9;
+    --accent-clr2: #CA72FF;
+
+}
+
+body, input {
+    font-family: 'Gluten', cursive;
+    margin: 0;
+    background-color: var(--basic-clr);
+}
+
+header a{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: .6em;
+    text-decoration: none;
+    color: var(--text-clr);
+}
+
+header {
+    /* background-color: #A9DEF9; */
+    /* border-radius: .7em; */
+    margin: 1em 1em 0 1em;
+    /* width: 9rem; */
+    /* padding: .3em;  */
+}
+
+
+header:hover{
+    cursor: pointer;
+}
+
+.hero-bg {
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em;
+}
+
+h1 span {
+    display: block;
+}
+
+
+/* !!------------------------ notepad -START ----------------------!! */
+/* ------------------------------------------------------------------ */
+
+
+.notepad {
+    position: relative;
+    background-color: white;
+    padding: 2rem 0 3.5rem 0;
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+    margin: 3em 1em 1em 1em;
+    /* border-left: solid grey .3rem; */
+    border-bottom: solid var(--text-accent) .4rem;
+    border-right: solid var(--text-accent) .3rem;    
+}
+
+
+/* ------------------------ type-area ---------------------- */
+
+/* ----------------------- WIRE SPIRAL - START------------------------ */
+
+.wire-spiral{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.wires{
+    position: absolute;
+    top: -.8rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 1;
+}
+
+.wire{
+    background-color: var(--text-clr);
+    width: .3rem;
+    height: 1.5rem;
+    border-radius: .5rem;
+}
+
+.holes{
+    position: absolute;
+    top: .25rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.hole{
+    border-radius: 45%;
+    border: solid .15em;
+    background-color: white;
+    width: .4rem;
+    height: .4rem;
+}
+
+/* -----------------------WIRE SPIRAL - END ------------------- */
+
+
+
+form{
+    text-align: left;
+    margin: 0 1em 1em 1em;
+}
+
+.conf_password, .password, .email, .surname, .prename {
+    margin: 1em 0;
+}
+
+
+.type-area input{
+    box-sizing: border-box;
+    /* border: 1.5px solid #D0F4DE; */
+    background-color: var(--accent-clr1); 
+    border-radius: .5em;
+    width: 100%; 
+    height: 2.3em;
+} 
+
+::placeholder{
+    color: var(--text-clr);
+    margin-left: 20rem;
+}
+
+
+
+/* ----------------------------------------------------------- */
+/*!! ----------------- notepad - END ---------------------!! */
+
+
+
+button {
+    font-family: 'Gluten', cursive;
+    font-size: 1.1rem;
+    border-radius: .7em;
+    height: 2.2rem;
+    margin-top: 2em;
+    margin-inline: auto;
+    margin-bottom: 2em;
+    cursor: pointer; 
+    display: block;
+    border: none;
+}
+
+.sign-up{
+    width: 90%;
+    background-color: var(--accent-clr2);
+    color : white;
+    
+}
+
+button:hover, button:focus {
+    background-color: var(--accent-clr2);
+    color: black;
+}
+
+.confirmation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+
+
+}
+
+.confirmation p{
+    color: var(--text-accent);
+    
+}
+
+.confirmation a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;      
+}
+
+.confirmation a:hover{
+    text-decoration: underline;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+    
+}
+
+.or p{
+    color: var(--text-accent);;
+}
+
+.line{
+    background-color: var(--text-accent);
+    width: 30%;
+    height: .3rem;
+    border-radius: .7rem;
+    flex-shrink: 0;
+}
+
+.guest{
+    padding: .5rem 1rem;
+}
+
+@media(min-width: 600px){
+
+    body{
+        background-color: var(--basic-clr);
+    }
+    .hero-bg {
+        margin-top: auto;
+        margin-bottom: auto;
+        background-color: var(--basic-clr);
+        margin-inline: auto;
+        max-width: 400px;
+
+    }
+
+}
