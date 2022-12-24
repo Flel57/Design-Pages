@@ -1,14 +1,9 @@
 
 /*
-- logo:creo andere font-family
-- undeline nav:li wenn hover oder active(fade von links)
-- nav bar abgrenzen
 - underlines im eyecathcher bereich fertigstellen
 */
 
-
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Permanent+Marker&family=Roboto+Mono&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gloria+Hallelujah&family=Gluten&family=Permanent+Marker&family=Roboto+Mono&display=swap');
 :root{
     --text-clr: black;
     --text-accent: grey;
@@ -20,10 +15,14 @@
     --accent-clr6: #FFFBD7;
 }
 
-* {
-    font-family: 'Gloria Hallelujah', cursive;
+*, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 /*---------------------nav bar↓↓↓2♣↓------------------------------------*/
@@ -31,7 +30,8 @@
 header{
     display: flex;
     align-items: center;
-    padding: 30px 5%;
+    padding: 30px 3%;
+    background-image: linear-gradient(to top, white, var(--accent-clr2)) ;
 }
 
 a{
@@ -40,10 +40,17 @@ a{
     color: var(--text-clr);
 }
 
+.nav__list a{
+    font-weight: 400;
+    color: var(--text-accent);
+}
+
 .logo{
+    font-family: 'Gluten', cursive;
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-right: 100px;
 }
 
 .logo img{
@@ -51,6 +58,7 @@ a{
 }
 
 .nav__list{
+    display: inline-block;
     list-style: none;
 }
 
@@ -59,17 +67,37 @@ a{
     padding: 0px 20px;    
 }
 
-.nav__list li a{
+.nav__list a{
+    position: relative;
     transition: all 0.3s ease 0s;
+    padding: 0 5px;
 }
 
 .nav__list li a:hover{
-    color: var(--text-accent);
+    color: var(--text-clr);
+}
+
+.nav__list a:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-clr);
+    transition: width 0.25s ease-out;
+}
+
+.nav__list a:hover:after{
+    width: 100%;
+    left: 0;
+    right: auto;
 }
 
 /*-----------------------------------------------*/
 
 .header{
+    margin-top: 10rem;
     text-align: center;
 }
 
@@ -77,9 +105,8 @@ h1 span{
     display: block;
 }
 
-.desc{
-    margin: 0;
-    font-size: .7rem;
+.desc{  
+    font-size: .8rem;
 }
 
 .intro{
